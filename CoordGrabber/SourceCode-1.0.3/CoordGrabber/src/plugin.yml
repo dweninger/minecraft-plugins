@@ -1,0 +1,17 @@
+main: me.nauctos.coordgrabber.Main
+name: CoordGrabber
+version: 1.0.3
+author: Nauctos
+description: This plugin allows you to broadcast the coords of a user on a timer.
+
+commands:
+  GrabCoords:
+    aliases: [CGGC]
+  BroadcastCoords:
+    aliases: [CGBC]
+  StopBroadcastingCoords:
+    aliases: [CGSBC]
+  StopGrabbingCoords:
+    aliases: [CGSGC]
+  CGToggleY:
+    aliases: [CGTZ]
