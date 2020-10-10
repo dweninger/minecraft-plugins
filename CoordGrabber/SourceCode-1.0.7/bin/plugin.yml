@@ -1,0 +1,74 @@
+main: me.nauctos.coordgrabber.Main
+name: CoordGrabber
+version: 1.0.7
+author: Nauctos
+description: This plugin allows you to broadcast the coords of a user on a timer.
+
+commands:
+  GrabCoords:
+    aliases: [cggc]
+    usage: /<command> [player] [int] 
+  BroadcastCoords:
+    aliases: [cgbc]
+    usage: /<command> [player] [int]
+  SendCoords:
+    aliases: [cgsc]
+    usage: /<command> [player] [int]
+  StopBroadcastingCoords:
+    aliases: [cgsbc]
+    usage: /<command>
+  StopGrabbingCoords:
+    aliases: [cgsgc]
+    usage: /<command>
+  StopSendingCoords:
+    aliases: [cgssc]
+    usage: /<command>
+  CgToggleY:
+    aliases: [cgty]
+    usage: /<command>
+
+permissions:
+   coordgrabber.*:
+     children:
+       coordgrabber.grabcoords: true
+       coordgrabber.sendcoords: true
+       coordgrabber.broadcastcoords: true
+       coordgrabber.stopbroadcsatingcoords: true
+       coordgrabber.stopgrabbingcoords: true
+       coordgrabber.stopsendingcoords: true
+       coordgrabber.toggley: true
+   coordgrabber.grabcoords.*:
+     children:
+       coordgrabber.grabcoords.own: true
+       coordgrabber.grabcoords.others: true
+       coordgrabber.grabcoords.timer: true
+   coordgrabber.sendcoords.*:
+     children:
+       coordgrabber.sendcoords.own: true
+       coordgrabber.sendcoords.others: true
+       coordgrabber.sendcoords.timer: true
+   coordgrabber.broadcastcoords.*:
+     children:
+       coordgrabber.broadcastcoords.own: true
+       coordgrabber.broadcastcoords.others: true
+       coordgrabber.broadcastcoords.timer: true
+   coordgrabber.grabcoords.own: 
+     default: true
+   coordgrabber.grabcoords.others:
+     default: op
+   coordgrabber.grabcoords.timer:
+     default: op
+   coordgrabber.sendcoords.own:
+     default: true
+   coordgrabber.sendcoords.others:
+     default: op
+   coordgrabber.sendcoords.timer:
+     default: op
+   coordgrabber.broadcastcoords.own:
+     default: true
+   coordgrabber.broadcastcoords.others:
+     default: op
+   coordgrabber.broadcastcoords.timer:
+     default: op
+   coordgrabber.toggley:
+     default: op
